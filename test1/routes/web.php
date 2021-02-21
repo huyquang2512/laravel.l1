@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/about', 'myController@about')->name('pages.layout_content.about');
 Route::get('/contact', 'myController@contact')->name('pages.layout_content.contact');
 Route::get('/', 'myController@select')->name('pages.layout_content.welcome');
+Route::get('validate', 'myController@validateView');
+Route::post('validate', 'myController@validatedata');
+Route::get('insert', 'myController@insert');
+Route::post('insert', 'myController@add');
+Route::group(['prefix'=>'session'], function(){
+    Route::get('set', 'myController@setSession');
+    Route::get('get', 'myController@getSession');
+});
+Route::get('table', 'myController@table');
+Route::get('getTitle', 'myController@getTitle');

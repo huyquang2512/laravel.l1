@@ -14,14 +14,24 @@
             <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
           @foreach ($dbb as $db)
           <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$db->id}}</th>
             <td>{{$db->Title}}</td>
             <td>{{$db->Content}}</td>
+            <td><button class="btn btn-sm btn-danger rounded-0">
+              <a href="acction/table/edit/{{$db->id}}">Update</a>
+            </button></td>
+            <td>
+              <button class="btn btn-sm btn-danger rounded-0">
+                <a href="acction/table/delete/{{$db->id}}">Delete</a>
+              </button>
+            </td>
           </tr>
     @endforeach
         </tbody>

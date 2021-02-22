@@ -60,11 +60,18 @@ class myController extends Controller
     }
     //delete
     public function delete(Request $request){
-        welcomeModelDB::find($request->id)->delete();
+        welcomeModel::find($request->id)->delete();
+        echo "Delete Thanh Cong";
      }
+
+     public function show($id) {
+        $data = welcomeModel::find($id);
+        return view('pages.layout_content.updateData',['data'=> $data]);
+     }
+
      //update
      public function update(Request $request){
-        $welcome = welcomeModelDB::find($request->id);
+        $welcome  = welcomeModel::find($request->id);
         $welcome->Title= $request->Title;
         $welcome->Content= $request->Content;
         $welcome->save();

@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$namespace = '\App\Http\Controllers';
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::apiResource('/api', 'myControllerApi@index');
+
+Route::apiResource('my-controller', 'myControllerApi');
+Route::put('edit/{id}', 'myControllerApi@update');
+Route::delete('delete/{id}', 'myControllerApi@destroy');
+Route::get('search/{Title}', 'myControllerApi@search');

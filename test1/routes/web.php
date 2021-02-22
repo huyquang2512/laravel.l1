@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\welcomeModel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,6 @@ Route::group(['prefix'=>'session'], function(){
 });
 Route::get('table', 'myController@table');
 Route::get('getTitle', 'myController@getTitle');
+Route::get('acction/table/edit/{id}', 'myController@show');
+Route::post('acction/table/edit/edit', 'myController@update');
+Route::get('acction/table/delete/{id}', 'myController@delete');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\welcomeModel;
 
-class myControllerApi extends Controller
+class MyControllerApi extends Controller
 {
     /**
      * Display a listing of the resource.

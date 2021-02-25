@@ -14,19 +14,19 @@ use App\welcomeModel;
 */
 
 // Route::get('/', 'myController@index')->name('pages.layout_content.welcome');
-Route::get('/about', 'myController@about')->name('pages.layout_content.about');
-Route::get('/contact', 'myController@contact')->name('pages.layout_content.contact');
-Route::get('/', 'myController@select')->name('pages.layout_content.welcome');
-Route::get('validate', 'myController@validateView');
-Route::post('validate', 'myController@validatedata');
-Route::get('insert', 'myController@insert');
-Route::post('insert', 'myController@add');
+Route::get('/about', 'MyController@about')->name('pages.layout_content.about');
+Route::get('/contact', 'MyController@contact')->name('pages.layout_content.contact');
+Route::get('/', 'MyController@select')->name('pages.layout_content.welcome');
+Route::get('validate', 'MyController@validateView');
+Route::post('validate', 'MyController@validatedata');
+Route::get('insert', 'MyController@insert');
+Route::post('insert', 'MyController@add');
 Route::group(['prefix'=>'session'], function(){
-    Route::get('set', 'myController@setSession');
-    Route::get('get', 'myController@getSession');
+    Route::get('set', 'MyController@setSession');
+    Route::get('get', 'MyController@getSession');
 });
-Route::get('table', 'myController@table');
-Route::get('getTitle', 'myController@getTitle');
-Route::get('acction/table/edit/{id}', 'myController@show');
-Route::post('acction/table/edit/edit', 'myController@update');
-Route::get('acction/table/delete/{id}', 'myController@delete');
+Route::get('table', 'MyController@table');
+Route::get('getTitle', 'MyController@getTitle');
+Route::get('acction/table/edit/{id}', 'MyController@show');
+Route::post('acction/table/edit/edit', 'MyController@update');
+Route::get('acction/table/delete/{id}', 'MyController@delete');

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class welcomeModel extends Model
+class WelcomeModel extends Model
 {
     protected $table = 'welcome';
     protected $fillable = ['Title', 'Content'];

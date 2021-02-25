@@ -12,14 +12,13 @@
 </div><!-- end row -->
 <div class="row">
  <div class="col-md-8">
-@foreach ($dbb as $db)
+@foreach ($data as $data)
 <div class="post">
-    <h3>{{$db->Title}}</h3>
-    <p>{{$db->Content}}</p>
+    <h3>{{$data->Title}}</h3>
+    <p>{{$data->Content}}</p>
     <a href="#" class="btn btn-primary">Read more</a>
 </div>
 @endforeach
-     
      <hr/>
  </div>
  <div class="col-md-3 col-md-offset-1">

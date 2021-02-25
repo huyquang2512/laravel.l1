@@ -19,17 +19,17 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($dbb as $db)
+          @foreach ($data as $data)
           <tr>
-            <th scope="row">{{$db->id}}</th>
-            <td>{{$db->Title}}</td>
-            <td>{{$db->Content}}</td>
+            <th scope="row">{{$data->id}}</th>
+            <td>{{$data->Title}}</td>
+            <td>{{$data->Content}}</td>
             <td><button class="btn btn-sm btn-danger rounded-0">
-              <a href="acction/table/edit/{{$db->id}}">Update</a>
+              <a href="acction/table/edit/{{$data->id}}">Update</a>
             </button></td>
             <td>
               <button class="btn btn-sm btn-danger rounded-0">
-                <a href="acction/table/delete/{{$db->id}}">Delete</a>
+                <a href="acction/table/delete/{{$data->id}}">Delete</a>
               </button>
             </td>
           </tr>
@@ -37,7 +37,7 @@
         </tbody>
       </table>
       <nav aria-label="Page navigation example">
-       {!! $dbb->links()!!}
+       {!! $data->links()!!}
       </nav>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>

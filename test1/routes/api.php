@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('my-controller', 'myControllerApi');
-Route::put('edit/{id}', 'myControllerApi@update');
-Route::delete('delete/{id}', 'myControllerApi@destroy');
-Route::get('search/{Title}', 'myControllerApi@search');
+Route::apiResource('my-controller', 'MyControllerApi');
+Route::put('edit/{id}', 'MyControllerApi@update');
+Route::delete('delete/{id}', 'MyControllerApi@destroy');
+Route::get('search/{Title}', 'MyControllerApi@search');
